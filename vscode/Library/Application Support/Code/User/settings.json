@@ -1,0 +1,19 @@
+{
+    "terminal.external.osxExec": "iTerm.app",
+    "files.autoSave": "afterDelay",
+    "python.languageServer": "Pylance",
+    "window.zoomLevel": 0,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "python.formatting.provider": "black",
+    "editor.fontLigatures": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.suggestSmartCommit": false,
+    "editor.accessibilityPageSize": 11
+}
