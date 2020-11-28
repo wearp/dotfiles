@@ -1,0 +1,12 @@
+# pyenv
+eval "$(pyenv init -)"
+
+# postgres
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+# loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# loads bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
