@@ -15,12 +15,7 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.suggestSmartCommit": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": [],
     "diffEditor.ignoreTrimWhitespace": false,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
