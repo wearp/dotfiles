@@ -1,6 +1,5 @@
 # pyenv
 eval "$(pyenv init -)"
-
 PYENV_ROOT="$HOME/.pyenv"
 PATH="$PYENV_ROOT/bin:$PATH"
 
@@ -38,3 +37,7 @@ export LD_LIBRARY_PATH=$ORACLE_HOME
 
 # avoid installing GPL dependency with Airflow
 export SLUGIFY_USES_TEXT_UNIDECODE=yes 
+
+# fix multiprocessing
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
