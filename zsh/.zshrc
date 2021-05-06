@@ -7,3 +7,4 @@ plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 . "$HOME/.zsh_misc"
+. "$HOME/.zsh_secrets"
