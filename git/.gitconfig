@@ -4,6 +4,8 @@
 	email = will.earp@alan.eu
 [pull]
     ff = only
+[push]
+    default = current
 [alias]
     lolp = log --graph --pretty=format:\\"%C(yellow)%h%Creset%C(cyan)%C(bold)%d%Creset %C(cyan)(%cr)%Creset %C(green)%ce%Creset %s\\"
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
