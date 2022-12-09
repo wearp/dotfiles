@@ -42,3 +42,6 @@ export SLUGIFY_USES_TEXT_UNIDECODE=yes
 # fix multiprocessing
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+# Graphite
+gt completion
+
