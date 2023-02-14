@@ -1,9 +1,52 @@
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# postgres
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+# loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# loads bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# setup compiler paths for readline and openssl
+local READLINE_PATH=$(brew --prefix readline)
+local OPENSSL_PATH=$(brew --prefix openssl)
+export LDFLAGS="-L$READLINE_PATH/lib -L$OPENSSL_PATH/lib"
+export CPPFLAGS="-I$READLINE_PATH/include -I$OPENSSL_PATH/include"
+export PKG_CONFIG_PATH="$READLINE_PATH/lib/pkgconfig:$OPENSSL_PATH/lib/pkgconfig"
+
+# use the OpenSSL from Homebrew instead of ruby-build
+# note: the Homebrew version gets updated, the ruby-build version doesn't
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$OPENSSL_PATH"
+
+# place openssl@1.1 at the beginning of your PATH (preempt system libs)
+export PATH=$OPENSSL_PATH/bin:$PATH
+
+# load rbenv
+eval "$(rbenv init -)"
+
+# Oracle Instant Client:
+export ORACLE_HOME=~/libs/oracle/instantclient_12_2/
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export LD_LIBRARY_PATH=$ORACLE_HOME
+
+# avoid installing GPL dependency with Airflow
+export SLUGIFY_USES_TEXT_UNIDECODE=yes 
+
+# fix multiprocessing
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES"$(pyenv init --path)"
 
 export ANDROID_HOME=~/Library/Android/sdk/
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 export REDIS_URL=redis://localhost:6379
 
+export PATH="$HOME/.rd/bin:$PATH"
