@@ -4,6 +4,6 @@ ZSH_THEME="robbyrussell"
 
 plugins=(git zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
-. "$HOME/.zsh_secrets"
+alias fkr="flask kay refresh"
+alias fku="flask kay upgrade"
 

@@ -50,3 +50,5 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export REDIS_URL=redis://localhost:6379
 
 export PATH="$HOME/.rd/bin:$PATH"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
