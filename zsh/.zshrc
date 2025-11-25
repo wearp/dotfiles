@@ -1,3 +1,8 @@
+autoload -Uz compinit && compinit
+
+
+export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
+
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
@@ -117,11 +122,8 @@ export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 eval "$(direnv hook zsh)"
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-# loads nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-# loads bash_completion
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # setup compiler paths for readline and openssl
 local READLINE_PATH=$(brew --prefix readline)
@@ -150,8 +152,6 @@ export SLUGIFY_USES_TEXT_UNIDECODE=yes
 
 export ANDROID_HOME=~/Library/Android/sdk/
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
-export REDIS_URL=redis://localhost:6379
 
 export PATH="$HOME/.rd/bin:$PATH"
 
